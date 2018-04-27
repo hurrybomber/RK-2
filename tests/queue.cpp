@@ -42,12 +42,14 @@ TEST_CASE("pop#1")
 TEST_CASE("pop#2")
 {
     Queue<int> a4 = {1};
+    // if queue 1 el
     a4.pop();
     REQUIRE( a4.size() == 0);
 }
 TEST_CASE("pop#3")
 {
     Queue<int> a4 = {1, 2, 3, 4, 5};
+    // if queue 5 el
     a4.pop();
     REQUIRE( a4.size() == 4);
 }
