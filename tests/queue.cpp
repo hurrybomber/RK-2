@@ -56,7 +56,7 @@ TEST_CASE("eq")
 {
     Queue <int>  a1;
     Queue <int>  a2 = {1, 2, 3, 4};
-    Queue <int>  a3{q2};
+    Queue <int>  a3{a2};
     a3.push(5);
     ofstream output{ "queue.bin" };
     output << a3;
