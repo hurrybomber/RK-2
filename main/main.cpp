@@ -5,36 +5,35 @@
 using namespace std;
 
 int main() {
-    Queue<int> q1;
-    Queue<int> q2 = {1, 2, 3, 4};
-    Queue<int> q3{q2};
-    cout << q2 << endl;
-    cout << q3 << endl;
-    q1.swap(q3);
-    cout << q1 << endl;
-    cout << boolalpha << q3.empty() << endl;
-    cout << q1.size() << endl;
-    cout << q2.size() << endl;
-    q3.push(5);
-   cout << boolalpha << q2.empty() << endl;
-    cout << q3 << endl;
+    Queue<int> a1;
+    Queue<int> a2 = {1, 2, 3, 4};
+    Queue<int> a3{a2};
+    cout << a2 << endl;
+    cout << a3 << endl;
+    a1.swap(a3);
+    cout << a1 << endl;
+    cout << boolalpha << a3.empty() << endl;
+    cout << a1.size() << endl;
+    cout << a2.size() << endl;
+    a3.push(5);
+   cout << boolalpha << a2.empty() << endl;
+    cout << a3 << endl;
     ofstream output{ "queue.bin" };
-    output << q3;
+    output << a3;
     output.close();
-    Queue<int> q4;
+    Queue<int> a4;
     ifstream input{ "queue.bin" };
-    input >> q4;
+    input >> a4;
     input.close();
-    cout << (q4 == q3) << endl;
+    cout << (a4 == a3) << endl;
     try {
-        q4.front();
+        a4.front();
     }
-    catch (logic_error e) { cout << "empty" << endl; }
-    //cout << q5.back() << endl;
-    q4.pop();
-    cout << q4 << endl;
+    catch (logic_error e) { cout << "empty" << endl; 
+    a4.pop();
+    cout << a4 << endl;
     try {
-        q4.front() = 6;
+        a4.front() = 6;
     }
     catch (logic_error e) { cout << e.what() << endl; }
     exit(0);
