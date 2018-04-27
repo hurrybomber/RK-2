@@ -102,7 +102,7 @@ public:
         }
     }
     auto pop() -> void{
-        if (list->first == nullptr) return; //уже пуст
+        if (list->first == nullptr) return; //если уже пуст
         if (list->first->next == nullptr){
             delete list->first;
             list->first = nullptr;
@@ -164,4 +164,4 @@ public:
         
         
         
-#endif /* Queue_hpp */
+#endif 
